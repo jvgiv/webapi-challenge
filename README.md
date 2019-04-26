@@ -25,25 +25,34 @@ In this challenge, create a web API around the following resources: `Projects` a
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Mention two parts of Express that you learned about this week.
+    it makes your backend like react.  it sits on top of the http server module that is provided by Node.js and adds extra functionality.  Brings in routing and middleware
+
 
 - [ ] Describe Middleware?
+    middleware is basically a group of functions that are in the middle of your operations
+    if you have a request type going to your server, it has to have an endpoint function to run.  You can put middleware in between that request and the function to verify that the items youre sending are correct or in the correct format.  
 
 - [ ] Describe a Resource?
 
+
 - [ ] What can the API return to help clients know if a request was successful?
+    a 200 http request.
+
 
 - [ ] How can we partition our application into sub-applications?
+    you can use express routing
+
 
 ## Project Setup
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your _Project Manager_ as collaborator on Github.
-- [ ] Clone your forked version of the Repository.
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on this Branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [x] Create a forked copy of this project.
+- [x] Add your _Project Manager_ as collaborator on Github.
+- [x] Clone your forked version of the Repository.
+- [x] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [x] Implement the project on this Branch, committing changes regularly.
+- [x] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project.
 
@@ -70,6 +79,8 @@ The `projectModel.js` helper includes an extra method called `getProjectActions(
 
 - [ ] Configure an _npm script_ named _"server"_ that will execute your code using _nodemon_. Make _nodemon_ be a development time dependency only, it shouldn't be deployed to production.
 - [ ] Configure an _npm script_ named _"start"_ that will execute your code using _node_.
+
+
 
 Design and build the necessary endpoints to:
 
