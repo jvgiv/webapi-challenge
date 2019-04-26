@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
     try {
-        const actions = await Actions.get(req.params.id)
+        const actions = await Actions.get()
         res.status(200).json(actions)
     } catch (error) {
         console.log(error)
@@ -43,7 +43,7 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
     try {
-        const actions = await Actions.update(req.params.id)
+        const actions = await Actions.update(req.params.id, req.body)
         res.status(200).json(actions)
     } catch (error) {
         console.log(error)
@@ -65,16 +65,6 @@ router.delete('/:id', async (req, res) => {
     }
 })
 
-router.get('/:id/actions', async (req, res) => {
-    try {  
-        const actions = await Actions.getProjectActions(req.params.id);
-        res.status(200).json(actions)
-    } catch (error) {
-        console.log(error);
-        res.status(500).json({
-            message: "Couldn't find that project's actions."
-        })
-    }
-})
+
 
 module.exports = router
